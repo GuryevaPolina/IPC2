@@ -108,6 +108,7 @@ struct sigaction sa;
 
 int main(void)
 {
+    srand(time(NULL));
     create_connection();
     
     sem_host = sem_open("/sem_h", O_CREAT, S_IRWXU, 0);
